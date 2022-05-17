@@ -18,7 +18,7 @@ import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
-    Button geometry,physics,cube,rectangular_prism,sphere,cylinder,speed,distance,time,density,force;
+    Button geometry,physics,prism,rectangular_prism,sphere,cylinder,speed,distance,time,density,force;
 
     Model object = new Model();
 
@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         geometry = findViewById(R.id.geometry);
         physics = findViewById(R.id.physics);
-        cube = findViewById(R.id.cube);
+        prism = findViewById(R.id.prism);
         rectangular_prism = findViewById(R.id.rectangular_prism);
         sphere = findViewById(R.id.sphere);
         cylinder = findViewById(R.id.cylinder);
@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         geometry.setOnClickListener(this);
         physics.setOnClickListener(this);
-        cube.setOnClickListener(this);
+        prism.setOnClickListener(this);
         rectangular_prism.setOnClickListener(this);
         sphere.setOnClickListener(this);
         cylinder.setOnClickListener(this);
@@ -71,8 +71,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.physics:
                 physics();
                 break;
-            case R.id.cube:
-                object.setShape("CUBE");
+            case R.id.prism:
+                object.setShape("PRISM");
                 geometry.putExtra("shape",object.getShape());
                 startActivity(geometry);
                 break;
@@ -121,7 +121,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void start() {
         geometry.setVisibility(View.VISIBLE);
         physics.setVisibility(View.VISIBLE);
-        cube.setVisibility(View.GONE);
+        prism.setVisibility(View.GONE);
         rectangular_prism.setVisibility(View.GONE);
         sphere.setVisibility(View.GONE);
         cylinder.setVisibility(View.GONE);
@@ -135,7 +135,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void geometry() {
         geometry.setVisibility(View.GONE);
         physics.setVisibility(View.GONE);
-        cube.setVisibility(View.VISIBLE);
+        prism.setVisibility(View.VISIBLE);
         rectangular_prism.setVisibility(View.VISIBLE);
         sphere.setVisibility(View.VISIBLE);
         cylinder.setVisibility(View.VISIBLE);
@@ -149,7 +149,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void physics() {
         geometry.setVisibility(View.GONE);
         physics.setVisibility(View.GONE);
-        cube.setVisibility(View.GONE);
+        prism.setVisibility(View.GONE);
         rectangular_prism.setVisibility(View.GONE);
         sphere.setVisibility(View.GONE);
         cylinder.setVisibility(View.GONE);

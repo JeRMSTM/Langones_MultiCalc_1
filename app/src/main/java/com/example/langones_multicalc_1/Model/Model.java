@@ -2,7 +2,7 @@ package com.example.langones_multicalc_1.Model;
 
 public class Model {
     private String concept, shape;
-    private double speed,distance,time,mass,volumedensity,acceleration,side,length,width,height,radius,volume,area,answer;
+    private double speed,distance,time,mass,volumedensity,acceleration,side,length,width,height,radius,volume,area,answer,perimeter,base;
 
     //getters
     public String getConcept() {return concept;}
@@ -21,6 +21,8 @@ public class Model {
     public double getVolume() {return volume;}
     public double getArea() {return area;}
     public double getAnswer() {return answer;}
+    public double getPerimeter() {return perimeter;}
+    public double getBase() {return base;}
 
     //setters
     public void setConcept(String concept) {this.concept = concept;}
@@ -39,4 +41,6 @@ public class Model {
     public void setVolume(double volume) {this.volume = volume;}
     public void setArea(double area) {this.area = area;}
     public void setAnswer(double answer) {this.answer = answer;}
+    public void setPerimeter(double perimeter) {this.perimeter = perimeter;}
+    public void setBase(double base) {this.base = base;}
 }

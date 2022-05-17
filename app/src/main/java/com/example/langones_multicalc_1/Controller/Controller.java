@@ -16,11 +16,13 @@ public class Controller {
     //Formulas for Geometry
     public void geometry(double a, double b, double c, String shape) {
         switch (shape) {
-            case "CUBE":
+            case "PRISM":
                 l.setShape(shape);
-                l.setSide(a);
-                l.setArea(6 * l.getSide()*l.getSide());
-                l.setVolume(l.getSide()*l.getSide()*l.getSide());
+                l.setBase(a);
+                l.setPerimeter(b);
+                l.setHeight(c);
+                l.setArea(2 * l.getBase() + (l.getPerimeter()* l.getHeight()));
+                l.setVolume(l.getBase()* l.getHeight());
                 break;
             case "RECTANGULAR PRISM":
                 l.setShape(shape);
@@ -86,17 +88,11 @@ public class Controller {
     public void geometryResult(TextView Shape, TextView j1, TextView j2, TextView j3, String shape, EditText geoInput2, EditText geoInput3) {
         l.setConcept(shape);
         switch (shape) {
-            case "CUBE":
+            case "PRISM":
                 Shape.setText(shape);
-                j1.setText("Side:");
-                j2.setVisibility(View.INVISIBLE);
-                j3.setVisibility(View.INVISIBLE);
-                geoInput2.setVisibility(View.INVISIBLE);
-                geoInput3.setVisibility(View.INVISIBLE);
-                geoInput2.setText("1");
-                geoInput3.setText("1");
-                geoInput2.setEnabled(false);
-                geoInput3.setEnabled(false);
+                j1.setText("Base:");
+                j2.setText("Perimeter:");
+                j3.setText("Height:");
                 break;
             case "RECTANGULAR PRISM":
                 Shape.setText(shape);

@@ -2,7 +2,7 @@
     <string name="app_name">Langones_MultiCalc_1</string>
     <string name="geometry">Geometry</string>
     <string name="physics">Physics</string>
-    <string name="cube">CUBE</string>
+    <string name="prism">PRISM</string>
     <string name="rectangular_prism">RECTANGULAR PRISM</string>
     <string name="sphere">SPHERE</string>
     <string name="cylinder">CYLINDER</string>

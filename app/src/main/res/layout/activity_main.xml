@@ -34,11 +34,11 @@
         app:layout_constraintVertical_bias="0.606" />
 
     <Button
-        android:id="@+id/cube"
+        android:id="@+id/prism"
         android:layout_width="199dp"
         android:layout_height="60dp"
         android:backgroundTint="@color/illuminating_emerald"
-        android:text="@string/cube"
+        android:text="@string/prism"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
